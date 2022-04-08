@@ -1,0 +1,120 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="master-formasmx.master.vb" Inherits="formasMX.master_formasmx" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Formas MX</title>    
+    <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    
+    <style>
+    .card-img {
+        width: 50%;
+        border-radius: calc(.25rem - 1px);
+               }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <link href="css/home.css" rel="stylesheet" />
+  </head>
+<body class="text-center">
+                <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+            <h3 class="masthead-brand">Formas MX</h3>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link active" href="#">Inicio</a>        
+                <a class="nav-link" href="#contact">Contacto</a>
+            </nav>
+            </div>
+        </header>
+            <p class="lead">                 
+            <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+                 
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="carousel-item active">
+                                    <img class="d-block w-100" src="img/formas_2.jpg" alt="First slide">
+                                    </div>
+                                </div>                 
+                    <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-thumb" data-slide-to="0" class="active"> <img class="d-block w-100" src="img/formas_2.jpg" class="img-fluid"></li>                
+                    </ol>
+                </div>       
+                </p>        
+        <p>
+                <a class="btn btn-outline-secondary" href="content/FORMAS_Catalogo.pdf" target="_blank">Ver catalógo</a>
+                <a class="btn btn-outline-secondary" href="content/Formas_2020.pdf" target="_blank">Ver catalógo 2020</a>
+        </p>
+    <form id="form1" runat="server" class="needs-validation text-center" novalidate>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form> 
+                
+
+     <%--   <footer class="mastfoot mt-auto">         
+            <div class="inner">
+            <p>Siguenos en  <a href="https://www.facebook.com/FormasHabitatCreativo/?ref=bookmarks"><img src="img/facebook-icon-40.png" alt="Facebook"></a>,<a href="https://www.instagram.com/formashabitat/?hl=es-la"><img src="img/instagram.png" alt="Instagram"></a></p></img></p>
+            </div>
+        </footer>--%>
+         <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-6 col-md">
+        <h5>Contactanos</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="mailto:claudia@formas.mx">claudia@formas.mx</a></li>
+          <li>(33) 381 723 89</li>
+          <li>Guadalajara Jalisco México</li>
+          <li>#formashabitatcreativo</li>
+          <li>FormasHabitatCreativo<a class="text-muted" href="https://www.facebook.com/FormasHabitatCreativo/?ref=bookmarks"><img src="img/facebook-icon-40.png" alt="Facebook" /></a></li>
+          <li>formashabitat<a class="text-muted" href="https://www.instagram.com/formashabitat/?hl=es-la"><img src="img/instagram.png" alt="Instagram" /></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+       <script>
+             // Example starter JavaScript for disabling form submissions if there are invalid fields
+             (function () {
+                 'use strict';
+                 window.addEventListener('load', function () {
+                     // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                     var forms = document.getElementsByClassName('needs-validation');
+                     // Loop over them and prevent submission
+                     var validation = Array.prototype.filter.call(forms, function (form) {
+                         form.addEventListener('submit', function (event) {
+                             if (form.checkValidity() === false) {
+                                 event.preventDefault();
+                                 event.stopPropagation();
+                             }
+                             form.classList.add('was-validated');
+                         }, false);
+                     });
+                 }, false);
+             })();
+        </script>
+</body>
+</html>
